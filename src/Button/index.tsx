@@ -1,11 +1,14 @@
+import { ReactNode } from "react"
 import { StyledButton } from "./style"
-
 interface ButtonProps {
-  icon?: string;
+  classe?: string;
+  children?: ReactNode;
 }
 
-export const Button = ({icon}: ButtonProps) => {
+export const Button = ({classe, children}: ButtonProps) : JSX.Element=> {
   return (
-    <StyledButton className={icon ? icon : ''}>#</StyledButton>
+    <StyledButton className={classe ? classe : ''}>
+      {children}
+    </StyledButton>
   )
 }

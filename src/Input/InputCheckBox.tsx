@@ -1,17 +1,20 @@
-import { CredentialsInput } from "./style";
+import { CredentialsCheked } from "./style";
 
 interface InputCheckBoxProps {
   id: String;
+  classe: String;
 }
 
-export const InputCheckBox = ({id}: InputCheckBoxProps) => {
+export const InputCheckBox = ({id, classe}: InputCheckBoxProps) => {
   return (
-    <div>
-      <CredentialsInput 
-        type="checkbox"
-        id={`${id}`}
-      />
-      <label htmlFor={`${id}`}>STAY SIGNED IN</label>
+    <div className={`${classe}`}>
+      <label htmlFor={`${id}`}>
+        <CredentialsCheked 
+          type="checkbox"
+          id={`${id}`}
+        />
+        Manter login
+      </label>
     </div>
   );
 }
